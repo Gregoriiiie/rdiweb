@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    background: grey;
+}
+/*HEADER SECTION*/
+header {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    background-image: url(images/background__header.jpg);
+    color: white;
+    flex-direction: column;
+    scroll-margin-top: 80px;
+}
+.header__img {
+    z-index: 10;
+    position: relative;
+    max-width: 320px;
+}
+.header__content {
+    z-index: 10;
+    position: relative;
+}
+.header__title {
+    color: gold;
+    font-size: 50px;
+    padding: 5px;
+}
+.header__subtitle {
+    color: gold;
+    padding: 5px;
+    font-size: 26px;
+}
+.header__text {
+    padding: 5px;
+    font-size: 16px;
+}
+/*NAVBAR SECTION*/
+.nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.nav__img {
+    position: absolute;
+    max-width: 70px;
+    top: -15px;
+    left: 0;
+}
+.button__burger {
+    display: none;
+}
+.button__label {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.nav__ul {
+    display: none;
+    box-shadow: 0 0 10px 0 black;
+}
+.nav__li {
+    list-style: none;
+    padding: 5px;
+    transition: 0.4s;
+    transition-property: background,border-radius;
+}
+.nav__li:hover {
+    background: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+.nav__a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.button__burger:checked ~ .nav__ul {
+    display: flex;
+    margin: auto;   
+    align-content: center;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    top: 50px;
+    right: 0;
+    border-radius: 8px;
+    padding: 10px;
+}
+@media screen and (min-width: 600px)
+{   .button__label {
+    display: none;
+    }
+    .nav {
+        padding: 2px;
+    }
+    .nav__ul {
+        position: relative;
+        display: flex;
+        box-shadow: none;
+        gap: 10px;
+        padding: none;
+    }
+    .nav__li {
+        padding: 0;
+    }
+    .nav__a {
+        display: block;
+        padding: 10px;
+    }
+}
+/*SECTION CONTACT*/
+.forms {
+    background: grey;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+}
+.contact__fieldset {
+    background: #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+.input__form {
+    text-align: center;
+}
+.input__form > label {
+    text-align: center;
+    padding: 5px;
+    display: block;
+}
+.input__form > input {
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid rgb(73, 73, 73);
+    border-radius: 2px;
+    transition: 0.5s;
+    transition-property: outline,font-weight;
+}
+.input__form > input:focus {
+    outline: none;
+    font-weight: bold;
+}
+.input__form > textarea {
+    resize: none;
+    padding: 10px;
+    width: 90%;
+    transition: 0.5s;
+    transition-property: outline,font-weight;
+    border: 2px solid rgb(73, 73, 73);
+    border-radius: 10px;
+    min-height: 200px;
+}
+.input__form > textarea:focus {
+    outline: none;
+    font-weight: bold;
+}
+.label__checkbox > a {
+    text-decoration: none;
+}
+.input__form > button {
+    width: 100%;
+    padding: 10px;
+    background: rgb(34, 133, 246);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-property: background;
+}
+.input__form > button:hover {
+    background: rgb(2, 88, 186);
+}
+@media screen and (min-width: 600px)
+{
+    .forms {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+/*NEXT SECTION*/
+.grid {
+    display: grid;
+    background: grey;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+.grid aside {
+    background: #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 0 20px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+.grid  aside > ol {
+    list-style: none;
+}
+.grid aside > ol > h3 {
+    font-size: 24px;
+    padding: 5px;
+}
+.grid aside > ol > li {
+    padding: 4px;
+}
+.grid aside > ol > li > a {
+    text-decoration: none;
+}
+.grid main {
+    border-radius: 10px; 
+    padding: 10px;
+    background: #eee;
+}
+.grid main > h3 {
+    text-align: center;
+    padding: 5px;
+}
+.grid main > p {
+    padding: 5px;
+}
+
+@media screen and (min-width: 600px)
+{
+    .grid {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+footer {
+    padding: 30px;
+    background: rgb(50, 50, 50);
+    color: white;
+    font-weight: bolder;
+}

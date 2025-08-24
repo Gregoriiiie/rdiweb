@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="about_this_page">
+        <div class="header__overlay"></div>
+        <div class="header__logo">
+            <img class="header__img" src="images/logo_rdi_white.png" alt="">
+        </div>
+        <div class="header__content">
+            <h1 class="header__title">RDI FRT</h1>
+            <h2 class="header__subtitle">RUTA DEL INGENIERO FACULTAD REGIONAL TUCUMAN</h2>
+            <p class="header__text">Esta pagina fue creado por y para los estudiantes como un medio externo complementario para los estudiantes de Ingenieria. <br>El proposito es servir como una ruta-guia para no quedar perdido durante la cursada entender mejor los temas vistos en clase consultar en el foro resoluciones de parciales y ejercicios de las materias de ciencias basicas y la mayoria de I.S.I (Ingenieria en sistemas de informacion). <br>Todo el contenido esta organizado de manera accesible para que puedan consultarlo en cualquier momento.</p>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="nav__logo">
+            <img class="nav__img" src="images/logo_rdi_black.png"">
+        </div>
+        <input id="button__burger" class="button__burger" type="checkbox">
+        <label class="button__label" for="button__burger">☰</label>
+        <ul class="nav__ul">
+            <li class="nav__li">
+                <a class="nav__a" href="#about_this_page">Acerca de la pagina</a>
+            </li>
+            <li class="nav__li">
+                <a class="nav__a" href="#materias">Materias</a>
+            </li>
+            <li class="nav__li">
+                <a class="nav__a" href="#">Aportes</a>
+            </li>
+            <li class="nav__li">
+                <a class="nav__a" href="#">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="grid">
+        <aside id="materias">
+            <h3>CIENCIAS BASICAS</h3>
+            <ol>
+                <li><a href="#">Analisis Matematico I</a></li>
+                <li><a href="#">Algebra y Geometria Analitica (proximamente)</a></li>
+                <li><a href="#">Fisica I (proximamente)</a></li>
+                <li><a href="#">Quimica (proximamente)</a></li>
+            </ol>
+            <h3>I.S.I</h3> 
+            <ol>
+                <li><a href="#">Algoritmos y estructuras de datos(proximamente)</a></li>
+                <li><a href="#">Arquitectura de computadoras(proximamente)</a></li>
+                <li><a href="#">Logica y estructuras discretas (proximamente)</a></li>
+            </ol>
+        </aside>
+        <main>
+            <h3>TENER EN CUENTA</h3>
+            <p>La ingeniería no se aprende de un día para otro se construye con constancia. <br>
+En la facultad, la eficiencia no significa estudiar más horas que nadie, sino aprovechar bien el tiempo. Para lograrlo, es clave: <br>
+
+🔹 Darle horas al estudio: no hay atajos, el progreso viene con dedicación diaria. <br>
+🔹 Saber estudiar: organizar los temas, planificar horarios y evitar distracciones hace la diferencia. <br>
+🔹 Recopilar información: usar apuntes, libros y materiales de calidad para tener una base sólida. <br>
+🔹 Usar la IA como apoyo: aprovechar la tecnología para aclarar dudas, repasar conceptos y generar ejemplos prácticos. <br>
+🔹 Aprender los conceptos: más allá de memorizar, comprender el “por qué” y el “cómo” es lo que convierte a un estudiante en un ingeniero. <br>
+🔹 Practicar, practicar y practicar: resolver ejercicios es la verdadera manera de fijar el conocimiento y prepararse para los exámenes. <br>
+
+Cada hora invertida hoy en tu formación es un paso hacia tu futuro como ingeniero. La constancia vence al talento disperso, y la práctica te da la confianza para enfrentar cualquier desafío. <br>
+
+✨ Recordá esto: el éxito en la ingeniería no es cuestión de suerte, sino de disciplina, estrategia y pasión por aprender.</p>
+        </main>
+    </div>
+    <form class="forms">
+        <fieldset class="contact__fieldset">
+            <legend></legend>
+            <h3>INFORMACION PERSONAL</h3>
+            <div class="input__form">
+                <label for="email__contact">Email</label>
+                <input required id="email__contact" type="email" placeholder="Email">
+            </div>
+            <div class="input__form">
+                <label for="name__form">Nombre completo</label>
+                <input required id="name__form" type="text" placeholder="Nombre completo">
+            </div>
+            <div class="input__form">
+                <label for="message__contact">Deje un mensaje</label>
+                <textarea required name="" id="message__contact" placeholder="Su mensaje"></textarea>
+            </div>
+            <div class="input__form">
+                <label class="label__checkbox" for="checkbox__form">Acepto los <a href="#">Terminos y condiciones</a></label>
+                <input class="checkbox__form" required type="checkbox">
+            </div>
+            <div class="input__form">
+                <button type="submit">ENVIAR</button>
+            </div>
+        </fieldset>
+        <fieldset class="contact__fieldset">
+            <legend></legend>
+            <h3>APORTES Y CONTRIBUCIONES</h3>
+            <p>Tu aporte ayuda mucho a los estudiantes si tenes fotos de parciales,finales,integrales y resoluciones de los mismos podes dejar aqui tu grano de arena la union hace la fuerza.</p>
+            <div class="input__form">
+                <label for="asunto">Tipo de aporte</label>
+                <input required id="asunto" type="text" placeholder="Parciales,Integrales,Finales resoluciones de ejercicios">
+            </div>
+            <div class="input__form">
+                <label for="input__file">Deje su archivo</label>
+                <input required id="input__file" type="file" accept="img">
+            </div>
+            <div class="input__form">
+                <label for="input__aport">Materia del aporte</label>
+                <input required id="input__aport" type="text" placeholder="Algebra,Analisis,Fisica">
+            </div>
+            <div class="input__form">
+                <label for="">Año de cursada</label>
+                <input type="date">
+            </div>
+            <div class="input__form">
+                <label for="input__checkbox">Autorizo a compartir este aporte con otros estudiantes </label>
+                <input required id="input__checkbox" type="checkbox">
+            </div>
+            <div class="input__form">
+                <button type="submit">ENVIAR</button>
+            </div>
+        </fieldset>
+    </form>
+    <footer>Develop by Gregoriee - Copyright @2025</footer>
+</body>
+</html>
